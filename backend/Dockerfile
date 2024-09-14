@@ -5,6 +5,7 @@ FROM node:20
 EXPOSE 8080
 #to access the db_host with mysl container
 ENV DB_HOST=mysql
+RUN useradd expense 
 RUN mkdir /opt/server
 RUN chown expense:expense -R /opt/server
 # RUN addgroup -S expense && adduser -S expense -G expense \
